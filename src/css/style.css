@@ -196,6 +196,8 @@ select {
 
 .boton-eliminar:hover {
   cursor: pointer;
+  color: red;
+
 }
 
 .boton-eliminar:focus {
