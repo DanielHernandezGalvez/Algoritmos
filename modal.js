@@ -20,8 +20,6 @@ modalCarrito.addEventListener('click', (e) =>{
     e.stopPropagation();
 })
 
-if(carritoIndex.hasOwnProperty(producto.id)){
-    producto.cantidad = carrito[producto.id].cantidad + 1
-}
+
 
 
