@@ -146,7 +146,9 @@ select {
   padding-bottom: 5px;
 }
 
-
+#btn-carrito{
+  color: white;
+}
 
 .modal-carrito #btn-cerrar-carrito {
   position: absolute;
