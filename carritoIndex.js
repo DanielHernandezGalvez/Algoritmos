@@ -57,8 +57,16 @@ const carritoDeCompras = [];
 		const item = carritoDeCompras.find((producto) => producto.id == productoId)
 		const indice = carritoDeCompras.indexOf(item)
 		carritoDeCompras.splice(indice, 1)
-		
-		renderProdcutoCarrito()
+			
+		Toastify({
+			text: "Se eliminó del carrito",
+			gravity: "bottom",
+			style: {
+			  background:  '#FF8000',
+			  color: '#ffffff'
+			}
+		  }).showToast();
+		  renderProdcutoCarrito()	
 	}
 
    
