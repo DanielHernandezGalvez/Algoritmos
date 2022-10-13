@@ -21,7 +21,15 @@ const mostrarProductos = (productos) => {
         const boton = document.getElementById(`boton${producto.id}`);
         boton.addEventListener('click', ()=>{
             carritoIndex(producto.id)
-            alert(`Se agrego ${producto.nombre} al carrito`)
+            //alert(`Se agrego ${producto.nombre} al carrito`)
+            Swal.fire({
+                title: 'Se agregó al carrito',
+                icon: 'success',
+                timer: 2000,
+                allowOutsideClick: true,
+                confirmButtonColor: '#FF8000',
+            
+            })
         } )
 
     })

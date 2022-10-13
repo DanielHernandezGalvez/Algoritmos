@@ -38,7 +38,6 @@ const carritoDeCompras = [];
     	let producto = productos.find(producto => producto.id == productoId);
 
 
-
     	if (carritoDeCompras.some(prod => prod.id == producto.id)) { //si ya esta el tipo de producto en el carrito
 
         	let indice = carritoDeCompras.findIndex(el => el.id === producto.id) //lo busca
@@ -58,6 +57,7 @@ const carritoDeCompras = [];
 		const item = carritoDeCompras.find((producto) => producto.id == productoId)
 		const indice = carritoDeCompras.indexOf(item)
 		carritoDeCompras.splice(indice, 1)
+		
 		renderProdcutoCarrito()
 	}
 
