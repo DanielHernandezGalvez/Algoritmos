@@ -1,3 +1,4 @@
+
 const carritoDeCompras = [];
 
 	const contenedorCarrito = document.getElementById('carrito-contenedor');

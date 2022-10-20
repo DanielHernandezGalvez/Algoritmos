@@ -1,6 +1,20 @@
-const mostrarProductos = (productos) => {
+const getProducts = async () => {
+    try {
+        const response = await fetch('./data/stock.json');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.log('Hubo un error:', error);
+    }
+   
+}
+
+
+
+const mostrarProductos = data  => {
     const contenedorProductos= document.getElementById('producto-contenedor')
-    productos.forEach(producto => {
+    
+    data.forEach(producto => {
         const div = document.createElement('div');
         div.classList.add('card');
         div.innerHTML += `
@@ -36,3 +50,5 @@ const mostrarProductos = (productos) => {
 
 }
 mostrarProductos(productos)
+
+
