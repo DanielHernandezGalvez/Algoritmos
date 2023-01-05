@@ -1,1 +1,0 @@
-aplicación hecha con react
