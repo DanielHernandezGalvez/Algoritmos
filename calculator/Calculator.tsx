@@ -54,13 +54,23 @@ export default function Calculator() {
       {inputValue: '1', style: styles.button, handler: handleInput},
       {inputValue: '2', style: styles.button, handler: handleInput},
       {inputValue: '3', style: styles.button, handler: handleInput},
-      {inputValue: '-', style: styles.operator, handler: handleInput},
+      {
+        inputValue: '-',
+        displayText: '-',
+        style: styles.operator,
+        handler: handleInput,
+      },
     ],
     [
       {inputValue: '0', style: styles.button, handler: handleInput},
       {inputValue: '.', style: styles.button, handler: handleInput},
       {inputValue: 'C', style: styles.button, handler: handleInput},
-      {inputValue: '+', style: styles.operator, handler: handleInput},
+      {
+        inputValue: '+',
+        displayText: '+',
+        style: styles.operator,
+        handler: handleInput,
+      },
     ],
     [
       {
@@ -139,7 +149,7 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   calculateButton: {
-    backgroundColor: '#ff9500',
+    backgroundColor: '#007bff',
     borderRadius: 10,
     padding: 18,
     marginHorizontal: 10,
@@ -147,7 +157,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   operator: {
-    backgroundColor: '#FF9500',
+    backgroundColor: '#007bff',
     flex: 1,
     padding: 18,
     borderRadius: 10,
