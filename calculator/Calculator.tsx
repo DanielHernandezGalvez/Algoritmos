@@ -17,6 +17,7 @@ export default function Calculator() {
       setInput(input === '0' ? value : input + value);
     }
   };
+  
   const handleCalc = () => {
     try {
       //   const result = eval(input);
