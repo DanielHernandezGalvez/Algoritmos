@@ -20,4 +20,8 @@ function validaEdad(edad: number, msg = "default"): string {
   return "no puedes pasar";
 }
 
-console.log(validaEdad(18, "Hola soy Dani"));
+// console.log(validaEdad(18, "Hola soy Dani"));
+
+function ErrorUsuario(): never {
+  throw new Error("Error de usuario");
+}
