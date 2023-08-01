@@ -1,15 +1,16 @@
 // Clases
 
 class Personaje {
-  id: number;
+  readonly id: number; // no se puede modificar esta propiedad
   name: string;
   nivel: number;
-  private hp: number; // solo se accede desde aquí
-  constructor(id: number, name: string, nivel: number, hp: number) {
+  private _hp: number; // solo se accede desde aquí
+  profesion?: string; // lo hace opcional para agregar despues
+  constructor(id: number, name: string, nivel: number, _hp: number) {
     this.id = id;
     this.name = name;
     this.nivel = nivel;
-    this.hp = hp;
+    this._hp = _hp;
   }
 
   // En clses no es necesario usar funcion
@@ -19,9 +20,9 @@ class Personaje {
   }
 
   cambiarHP(cantidad: number): number {
-    this.hp = this.hp + cantidad;
+    this._hp = this._hp + cantidad;
     // no pasarse del máximo
-    return this.hp;
+    return this._hp;
   }
 }
 
