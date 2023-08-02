@@ -19,12 +19,16 @@ class DatosBasicos {
   constructor(
     public name: string,
     public desc: string,
-    public created_at: Date,
-    public created_by: number
+    protected created_at: Date, // no pueden ser accedidas desde afuera
+    protected created_by: number // solo desde aqui y donde se hereden
   ) {}
 
   get fullYear() {
     return this.created_at.getFullYear();
+  }
+
+  get fullDesc() {
+    return this.name + " " + this.desc;
   }
 }
 
@@ -38,6 +42,10 @@ class Producto extends DatosBasicos {
     created_by: number
   ) {
     super(name, desc, created_at, created_by);
+  }
+
+  override get fullDesc() {
+    return "Producto: " + super.fullDesc;
   }
 }
 
@@ -55,6 +63,10 @@ class Categoria extends DatosBasicos {
   agregarProducto(producto: Producto) {
     this.productos.push(producto);
   }
+
+  override get fullDesc() {
+    return "Categoría: " + super.fullDesc;
+  }
 }
 
 let producto1 = new Producto(
@@ -68,4 +80,4 @@ let producto1 = new Producto(
 
 let categoria = new Categoria("celulares", "", new Date(), 1);
 categoria.agregarProducto(producto1);
-+console.log(producto1, categoria);
+console.log(producto1.fullDesc, categoria.fullDesc);
