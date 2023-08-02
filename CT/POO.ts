@@ -1,16 +1,21 @@
 // Clases
 
 class Personaje {
-  readonly id: number; // no se puede modificar esta propiedad
-  name: string;
-  nivel: number;
-  private _hp: number; // solo se accede desde aquí
+  // readonly id: number; // no se puede modificar esta propiedad
+  // name: string;
+  // nivel: number;
+  // private _hp: number; // solo se accede desde aquí
   profesion?: string; // lo hace opcional para agregar despues
-  constructor(id: number, name: string, nivel: number, _hp: number) {
-    this.id = id;
-    this.name = name;
-    this.nivel = nivel;
-    this._hp = _hp;
+  constructor(
+    public readonly id: number,
+    public name: string,
+    public nivel: number,
+    private _hp: number
+  ) {
+    // this.id = id;
+    // this.name = name;
+    // this.nivel = nivel;
+    // this._hp = _hp;
   }
 
   // En clses no es necesario usar funcion
